@@ -10,6 +10,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
+    "check": "vp check",
     "fmt": "vp fmt && vp fmt --check",
     "lint": "vp lint",
     "typecheck": "nuxt typecheck",
