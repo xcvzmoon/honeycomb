@@ -1,39 +1,41 @@
-name: CI (Format, Lint, Typecheck, and Build)
+name: CI (Check, Verify, and Build)
 
-on: push
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   ci:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v6
+      - name: Checkout Git Repo
+        uses: actions/checkout@v5
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-
-      - name: Install node
-        uses: actions/setup-node@v6
+      - name: Setup Vite+
+        uses: voidzero-dev/setup-vp@v1
         with:
-          node-version-file: .nvmrc
-          cache: pnpm
+          node-version: '24'
+          cache: true
+          run-install: false
 
-      - name: Install dependencies
-        run: pn ci
+      - name: Install Dependencies
+        run: vp i --frozen-lockfile -- --trust-lockfile
 
-      - name: Format Files
-        run: pn fmt
+      - name: Check Files
+        run: vpr check
 
-      - name: Lint Files
-        run: pn lint
+      - name: Verify Types
+        run: vpr typecheck
 
-      - name: Typecheck Files
-        run: pn typecheck
-
-      - name: Build Application
-        run: pn build
+      - name: Build Nuxt
+        run: vpr build
