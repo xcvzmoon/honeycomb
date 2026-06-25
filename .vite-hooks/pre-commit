@@ -1,0 +1,5 @@
+pn fmt
+pn lint
+pn typecheck
+# pn test
+vp staged

@@ -1,0 +1,39 @@
+name: CI (Format, Lint, Typecheck, and Build)
+
+on: push
+
+jobs:
+  ci:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Install node
+        uses: actions/setup-node@v6
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pn ci
+
+      - name: Format Files
+        run: pn fmt
+
+      - name: Lint Files
+        run: pn lint
+
+      - name: Typecheck Files
+        run: pn typecheck
+
+      - name: Build Application
+        run: pn build
