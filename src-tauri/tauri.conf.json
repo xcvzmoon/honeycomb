@@ -13,16 +13,19 @@
     "windows": [
       {
         "title": "Honeycomb",
-        "width": 800,
-        "height": 600,
+        "width": 1300,
+        "height": 900,
         "resizable": true,
         "fullscreen": false,
-        "center": true
+        "center": true,
+        "hiddenTitle": true,
+        "titleBarStyle": "Overlay"
       }
     ],
     "security": {
       "csp": null
-    }
+    },
+    "macOSPrivateApi": true
   },
   "bundle": {
     "active": true,
