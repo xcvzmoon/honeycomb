@@ -1,4 +1,4 @@
-name: CI (Check, Verify, and Build)
+name: Nuxt CI
 
 on:
   push:
@@ -14,7 +14,8 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  ci:
+  nuxt:
+    name: Nuxt
     runs-on: ubuntu-latest
 
     steps:
@@ -31,11 +32,17 @@ jobs:
       - name: Install Dependencies
         run: vp i --frozen-lockfile -- --trust-lockfile
 
-      - name: Check Files
-        run: vpr check
+      - name: Format Nuxt
+        run: vpr nuxt:fmt
 
-      - name: Verify Types
-        run: vpr typecheck
+      - name: Lint Nuxt
+        run: vpr nuxt:lint
 
-      - name: Build Nuxt
-        run: vpr build
+      - name: Verify Nuxt Types
+        run: vpr nuxt:typecheck
+
+      - name: Test Nuxt
+        run: vpr nuxt:test
+
+      - name: Generate Nuxt Static Output
+        run: vpr nuxt:generate
