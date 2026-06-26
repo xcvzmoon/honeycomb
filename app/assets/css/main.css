@@ -5,3 +5,9 @@
   --font-sans: 'Inter', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 }
+
+@layer {
+  body {
+    @apply overflow-hidden font-mono antialiased;
+  }
+}
