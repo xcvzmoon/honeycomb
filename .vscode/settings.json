@@ -24,10 +24,16 @@
   "[javascript]": {
     "editor.defaultFormatter": "oxc.oxc-vscode"
   },
-  "[javascriptreact]": {
+  "[json]": {
     "editor.defaultFormatter": "oxc.oxc-vscode"
   },
-  "[typescriptreact]": {
+  "[yaml]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
+  "[toml]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
+  "[mdc]": {
     "editor.defaultFormatter": "oxc.oxc-vscode"
   }
 }

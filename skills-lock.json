@@ -13,6 +13,12 @@
       "skillPath": "skills/nuxt-ui/SKILL.md",
       "computedHash": "2d58c6092b7028db223a819d5a37badc860a4036ca134a3e457ce7b056562f72"
     },
+    "tauri-v2": {
+      "source": "nodnarbnitram/claude-code-extensions",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/tauri-v2/SKILL.md",
+      "computedHash": "377c61c46cf48c35b942042bc8abb9a039049a47f37d7f12b4f491d012777490"
+    },
     "vitest": {
       "source": "antfu/skills",
       "sourceType": "github",
