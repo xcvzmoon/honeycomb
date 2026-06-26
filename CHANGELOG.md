@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v0.0.2
+
+[compare changes](https://github.com/xcvzmoon/honeycomb/compare/v0.0.1...v0.0.2)
+
+### 🩹 Fixes
+
+- **pre-commit:** Use proper scripts ([9811359](https://github.com/xcvzmoon/honeycomb/commit/9811359))
+- **ci:** Stabilize Tauri release workflow ([ac1f2c4](https://github.com/xcvzmoon/honeycomb/commit/ac1f2c4))
+
+### ❤️ Contributors
+
+- Mon Albert Gamil <mrgamilmonalbert@gmail.com>
+
 ## v0.0.1
 
 
