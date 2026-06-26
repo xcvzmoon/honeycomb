@@ -1,6 +1,6 @@
 [package]
 name = "honeycomb"
-version = "0.0.0"
+version = "0.0.1"
 description = ""
 authors = ["Mon Albert Gamil <mrgamilmonalbert@gmail.com>"]
 license = "MIT"
