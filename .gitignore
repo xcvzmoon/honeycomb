@@ -29,3 +29,6 @@ coverage/
 # Playwright
 playwright-report/
 test-results/
+
+# PNPM Store
+.pnpm-store/
