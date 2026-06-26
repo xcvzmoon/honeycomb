@@ -93,5 +93,41 @@ export default defineAppConfig({
         },
       },
     },
+    select: {
+      variants: {
+        size: {
+          xs: {
+            leadingIcon: 'size-2',
+            trailingIcon: 'size-2',
+            itemLeadingIcon: 'size-2',
+            itemTrailingIcon: 'size-2',
+          },
+          sm: {
+            leadingIcon: 'size-3',
+            trailingIcon: 'size-3',
+            itemLeadingIcon: 'size-3',
+            itemTrailingIcon: 'size-3',
+          },
+          md: {
+            leadingIcon: 'size-4',
+            trailingIcon: 'size-4',
+            itemLeadingIcon: 'size-4',
+            itemTrailingIcon: 'size-4',
+          },
+          lg: {
+            leadingIcon: 'size-5',
+            trailingIcon: 'size-5',
+            itemLeadingIcon: 'size-5',
+            itemTrailingIcon: 'size-5',
+          },
+          xl: {
+            leadingIcon: 'size-6',
+            trailingIcon: 'size-6',
+            itemLeadingIcon: 'size-6',
+            itemTrailingIcon: 'size-6',
+          },
+        },
+      },
+    },
   },
 });
