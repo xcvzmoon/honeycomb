@@ -27,6 +27,11 @@
     },
     "macOSPrivateApi": true
   },
+  "plugins": {
+    "sql": {
+      "preload": ["sqlite:honeycomb.db"]
+    }
+  },
   "bundle": {
     "active": true,
     "targets": "all",
