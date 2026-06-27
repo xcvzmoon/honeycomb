@@ -23,3 +23,13 @@ serde = { version = "1.0", features = ["derive"] }
 log = "0.4"
 tauri = { version = "2.11.3", features = ["macos-private-api"] }
 tauri-plugin-log = "2"
+libsqlite3-sys = { version = "0.30.1", default-features = false, features = [
+  "bundled-sqlcipher-vendored-openssl",
+] }
+tauri-plugin-store = "2.4.3"
+reqwest = { version = "0.12", features = ["json", "rustls-tls", "stream"] }
+sqlx = { version = "0.8.6", features = ["sqlite", "runtime-tokio", "macros"] }
+uuid = { version = "1.19.0", features = ["v7", "serde"] }
+tokenizers = { version = "0.22.1", default-features = false, features = ["onig"] }
+futures-util = "0.3"
+keyring = "4.1.2"
